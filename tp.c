@@ -7,25 +7,25 @@
 int main()
 {
     int op = 1, n;
-    Arvore raiz;
-    raiz = malloc(sizeof(Arvore));
+    Arvore raiz; // Declaracao da raiz da arvore
 
-    alocarArvore(&raiz);
+    alocarArvore(&raiz); // Inicializa a raiz da arvore
 
+    // Loop principal do programa
     while (op != 0)
     {
-        scanf("%d", &op);
+        scanf("%d", &op); // Le a operacao escolhida pelo usuario
         switch (op)
         {
-        case 1:
-            scanf("%d", &n);
+        case 1: // Inserir elementos
+            scanf("%d", &n); 
             leArvore(&raiz, n);
             break;
-        case 2:
+        case 2: // Imprime os dados da arvore
             printf("Dados inOrder:\n");
             printInOrder(raiz);
             break;
-        case 0:
+        case 0: // Encerra o programa e imprime os dados da arvore
             printf("Dados inOrder:\n");
             printInOrder(raiz);
             break;
@@ -36,7 +36,9 @@ int main()
         }
     }
 
-    //printRBTreeRecursive(raiz, 0, "");
+    printf("\n\n\n");
+    printRBTreeRecursive(raiz, 0, "");
+    printf("\n\n\n");
 
-    desalocarArvore(&raiz);
+    desalocarArvore(&raiz); // Libera a memoria alocada para a arvore
 }
