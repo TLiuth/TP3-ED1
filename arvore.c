@@ -52,7 +52,7 @@ void leArvore(Arvore *pRaiz, int n)
     }
 }
 
-void rotacaoAEsquerda(No** arvore, No* x) {
+void rotacaoEsquerda(No** arvore, No* x) {
     if (x != NULL && x->pDir != NULL) {
         No* y = x->pDir;
         x->pDir = y->pEsq;
@@ -76,7 +76,7 @@ void rotacaoAEsquerda(No** arvore, No* x) {
     //printRBTreeRecursive(*arvore, 0, "");
 }
 
-void rotacaoADireita(No** arvore, No* y) {
+void rotacaoDireita(No** arvore, No* y) {
     if (y != NULL && y->pEsq != NULL) {
         No* x = y->pEsq;
         y->pEsq = x->pDir;
@@ -173,7 +173,7 @@ void balanceamento(No **raiz, No *novo)
                 if (novo == pai->pDir)
                 {
                     novo = pai;             // Caso 2
-                    rotacaoAEsquerda(raiz, pai); // Caso 2
+                    rotacaoEsquerda(raiz, pai); // Caso 2
                     pai->cor = RED;
                     rot_dupla1++;
 
@@ -181,7 +181,7 @@ void balanceamento(No **raiz, No *novo)
                 if(!rot_dupla1)
                     pai->cor = BLACK;
                 novo->pPai->pPai->cor = RED;         // Caso 3
-                rotacaoADireita(raiz, novo->pPai->pPai); // Caso 3
+                rotacaoDireita(raiz, novo->pPai->pPai); // Caso 3
 
             }
         } else {
@@ -198,14 +198,14 @@ void balanceamento(No **raiz, No *novo)
                 if (novo == novo->pPai->pEsq)
                 {
                     novo = pai;
-                    rotacaoADireita(raiz, pai); // Caso 2
+                    rotacaoDireita(raiz, pai); // Caso 2
                     pai->cor = RED;
                     rot_dupla2++;
                 }
                 if(!rot_dupla2)
                     pai->cor = BLACK;
                 novo->pPai->pPai->cor = RED;         // Caso 3
-                rotacaoAEsquerda(raiz, novo->pPai->pPai); // Caso 3
+                rotacaoEsquerda(raiz, novo->pPai->pPai); // Caso 3
             }
         }
     }

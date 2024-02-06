@@ -8,7 +8,6 @@
 
 typedef struct {
     char nome[TAMNOME];
-    char nascimento[11];
     int idade;
 } Pessoa;
 
@@ -26,27 +25,21 @@ typedef No* Arvore;
 
 void alocarArvore(No **pRaiz);
 
-void desalocarArvore();
+void desalocarArvore(No **ppRaiz);
 
 No* NoCria(No x);
 
 void leArvore(Arvore *pRaiz, int n);
 
-void rotacaoEsquerda(No** pRaiz, No* x);
-
-void rotacaoDireita(No **pRaiz, No* x);
-
 void balanceamento(No **T, No *umNoh);
 
 void printInOrder(No *p);
 
-bool ArvoreRetira(No **p, Pessoa x);
-
 void liberaArvore(No **ppRaiz);
 
-void rotacaoADireita(No** arvore, No* y);
+void rotacaoDireita(No** arvore, No* y);
 
-void rotacaoAEsquerda(No** arvore, No* x);
+void rotacaoEsquerda(No** arvore, No* x);
 
 void insercao(No **raiz, No *umValor);
 #endif
