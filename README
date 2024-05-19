@@ -1,0 +1,11 @@
+Trabalho Prático 3 - Salvando dados na Árvore Rubro-Negra
+BCC 202 Estrutura de Dados Î
+Universidade Federal de Ouro Preto
+
+Autores: Thiago Ayolphi Liuth, Yasmin Altino Araújo
+
+O presente trabalho propõe a criação de um sistema de dados de pacientes que devem ser lidos e gerenciados em memória principal em tempo de execução, por meio de uma árvore binária balanceada, a Árvore Rubro-Negra.
+Salvamento dos dados não está implementado, e todos são perdidos ao fim da execução.
+Uma descrição geral da implementação e a análise dos resultados observados podem ser encontrados no relatório presente neste repositório, bem como nossas fontes.
+Os códigos são acompanhados de comentários explicativos.
+Aqui, damos permissão para utilização do código para fins didáticos e acadêmicos.
